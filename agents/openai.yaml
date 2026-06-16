@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ele's LLM Wiki"
+  short_description: "维护通用 LLM-Wiki 知识库工作流"
+  default_prompt: "Use $eles-llm-wiki to整理一批资料并更新 LLM-Wiki 的页面、反链、索引和维护日志。"
