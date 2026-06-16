@@ -1,13 +1,22 @@
 ---
 name: eles-llm-wiki
-description: Maintain Ele's Chinese Obsidian-style LLM-Wiki knowledge vault for research materials and reusable knowledge workflows. Use when Codex is asked to organize PDFs, articles, course materials, notes, or source folders into LLM-Wiki; create or update source pages, wiki pages, paper pages, reading notes, MOCs, claims, relationships, audits, backlinks, indexes, or maintenance logs; clean placeholders; rename notes; or keep the vault consistent.
+description: Maintain Ele's bilingual Chinese/English Obsidian-style LLM-Wiki knowledge vault for research materials and reusable knowledge workflows. Use when Codex is asked to organize PDFs, articles, course materials, notes, or source folders into LLM-Wiki; create or update source pages, wiki pages, paper pages, reading notes, MOCs, claims, relationships, audits, backlinks, indexes, or maintenance logs; clean placeholders; rename notes; translate or align Chinese/English note conventions; or keep the vault consistent.
 ---
 
 # Ele's LLM Wiki
 
-Use this skill to maintain an LLM-Wiki vault as a living knowledge system, not a pile of summaries. Write the vault content in Chinese, preserve important English method names, and use Obsidian wikilinks for internal pages.
+Use this skill to maintain an LLM-Wiki vault as a living knowledge system, not a pile of summaries. It supports Chinese, English, and mixed Chinese-English vaults. Use Obsidian wikilinks for internal pages.
 
-For detailed Chinese conventions, page patterns, note titles, audit patterns, and verification snippets, read `references/llm-wiki-workflow.md` when the task involves more than a small one-file edit.
+For detailed bilingual conventions, page patterns, note titles, audit patterns, and verification snippets, read `references/llm-wiki-workflow.md` when the task involves more than a small one-file edit.
+
+## Language Policy
+
+- Follow the user's language for conversation and final summaries.
+- Follow the vault's existing language for page titles, headings, and links.
+- In a Chinese vault, write explanations in Chinese while preserving important English terms, method names, paper titles, model names, and acronyms.
+- In an English vault, write headings and explanations in English, while preserving Chinese source titles when they are the canonical filenames or citations.
+- In a mixed vault, do not translate established page names unless the task is explicitly a rename/translation pass; add aliases or bilingual glosses only when useful.
+- For bilingual pages, prefer `Chinese term (English term)` on first mention, then use the locally dominant term.
 
 ## Agent Compatibility
 
@@ -80,7 +89,7 @@ Read `references/llm-wiki-workflow.md` for the exact Chinese directory names.
 ## Editing Rules
 
 - Prefer direct integration over append-only edits.
-- Keep Chinese headings and explanations in vault pages; preserve important English model and method names.
+- Match the vault's language style; preserve important original-language titles, model names, method names, and citations.
 - Use Obsidian wikilinks for internal pages.
 - Use tables for comparisons, methods, datasets, and paper positioning.
 - Avoid creating auxiliary docs unless the vault already uses that page type for the task.

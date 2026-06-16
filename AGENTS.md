@@ -1,18 +1,20 @@
 # Ele's LLM Wiki Agent Guide
 
-This directory defines a portable skill for maintaining Ele's LLM-Wiki vault.
+This directory defines a portable bilingual skill for maintaining Ele's LLM-Wiki vault.
 
 Use this guide for Codex, Claude Code, or any agent that reads project-level instructions.
 
 ## Entry Points
 
 1. Read `SKILL.md` for the core workflow.
-2. Read `references/llm-wiki-workflow.md` for Chinese vault conventions, page patterns, audits, logs, and verification snippets.
+2. Read `references/llm-wiki-workflow.md` for bilingual vault conventions, page patterns, audits, logs, and verification snippets.
 3. Treat `E:\LLM-Wiki` as the default vault unless the user gives another path.
 
 ## Agent-Agnostic Rules
 
 - Inspect existing vault structure before editing.
+- Follow the user's language in conversation and the vault's existing language in files.
+- Preserve original-language titles, citations, model names, method names, and acronyms.
 - Preserve source traceability.
 - Update source/wiki/output/memory/navigation/log layers when relevant.
 - Keep page edits integrated into the original structure.

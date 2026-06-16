@@ -1,6 +1,6 @@
 # Ele's LLM Wiki
 
-Ele's LLM Wiki is a portable agent skill for maintaining a Chinese, Obsidian-style LLM-Wiki knowledge vault.
+Ele's LLM Wiki is a portable bilingual agent skill for maintaining Chinese, English, or mixed-language Obsidian-style LLM-Wiki knowledge vaults.
 
 It turns repeated knowledge-base maintenance work into a reusable workflow: ingesting source material, compiling wiki pages, maintaining reading notes and MOCs, checking backlinks, cleaning placeholders, and recording maintenance logs.
 
@@ -15,8 +15,16 @@ The skill is designed to be readable by multiple coding agents:
 - Organizes PDFs, articles, course materials, notes, and source folders into an LLM-Wiki vault.
 - Maintains source pages, wiki pages, paper pages, reading notes, MOCs, indexes, claims, relationships, and logs.
 - Keeps Obsidian-style wikilinks and backlinks consistent.
+- Supports Chinese, English, and mixed-language vault conventions.
 - Provides audit patterns for broken links, missing backlinks, placeholders, orphan pages, stale indexes, and low-confidence pages.
 - Encourages integrated revisions instead of appending loose maintenance notes to the end of pages.
+
+## Language Support
+
+- Use the user's language for interaction and summaries.
+- Use the vault's existing language for filenames, headings, and established page names.
+- Preserve original-language paper titles, citations, model names, method names, and acronyms.
+- For bilingual pages, prefer `Chinese term (English term)` or `English term (Chinese term)` on first mention, then follow the local style.
 
 ## Repository Structure
 

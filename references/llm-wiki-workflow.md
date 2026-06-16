@@ -13,6 +13,19 @@ Treat the vault as a four-layer LLM Wiki:
 
 Do not treat an import as finished until the relevant source, wiki, output, navigation, memory, and log pieces are coherent.
 
+## Language Conventions
+
+This workflow supports Chinese, English, and mixed-language vaults.
+
+| Context | Recommended style |
+|---|---|
+| Chinese vault | Chinese headings and explanations; preserve English paper titles, model names, methods, acronyms, and citations |
+| English vault | English headings and explanations; preserve Chinese source titles when they are canonical filenames or bibliographic titles |
+| Mixed vault | Follow nearby pages and existing indexes; avoid translating established page names unless explicitly asked |
+| Bilingual explanation | Use `中文术语 (English term)` or `English term (中文术语)` on first mention, then follow the dominant local style |
+
+Do not mass-translate filenames, wikilinks, or headings just to normalize language. Rename only when the user asks for a rename/translation pass, and then update all backlinks, indexes, and logs.
+
 ## Page Standards
 
 Long-lived pages should use frontmatter like:
@@ -29,7 +42,7 @@ tags: []
 ---
 ```
 
-Paper pages often contain:
+Paper pages often contain the local-language equivalent of:
 
 - `# Title`
 - `## 基本信息`
@@ -45,9 +58,11 @@ Paper pages often contain:
 
 If a field is uncertain, prefer "原文/抽取文本未给出明确..." plus what is known. Do not leave bare `未提及` in final maintained pages.
 
+For English pages, use the equivalent traceable uncertainty statement, such as "The source/extracted text does not clearly specify...". Avoid bare placeholders like "not mentioned" in final maintained pages.
+
 ## Reading Note System
 
-Reading notes usually live in `05_输出_Outputs/` and use concise names such as `读书笔记 - 主题名`. If a domain has a classification index, keep the index synchronized with note filenames, headings, and backlinks.
+Reading notes usually live in `05_输出_Outputs/` and use concise names. Chinese vaults may use names like `读书笔记 - 主题名`; English vaults may use names like `Reading Note - Topic`. If a domain has a classification index, keep the index synchronized with note filenames, headings, and backlinks.
 
 When adding papers to reading notes:
 
@@ -63,6 +78,7 @@ When revising a reading note:
 - Avoid tail sections named like "本轮补充", "修订补充", or date-stamped maintenance notes.
 - Use "核心理念", method framework, paper-positioning tables, comparisons, common limitations, and reusable conclusions.
 - Keep the note usable for oral presentation or literature review planning.
+- Preserve the note's established language. If adding bilingual glosses, integrate them into the main text rather than appending a translation block.
 
 ## Review/Progress Source Handling
 
@@ -86,7 +102,7 @@ Useful review-writing categories:
 Common audits:
 
 - Low confidence pages: scan frontmatter `confidence`.
-- Placeholder cleanup: scan `未提及`.
+- Placeholder cleanup: scan placeholders such as `未提及`, `not mentioned`, `TBD`, `TODO`, or local equivalents.
 - Missing backlinks: compare reading-note links with source/wiki-page `## 对应读书笔记` sections when applicable.
 - Missing note membership: scan relevant `type: paper`, `type: source`, or other content pages and classify into existing or new reading notes.
 - Broken links: extract `[[...]]` and check target `.md` exists.
