@@ -35,13 +35,10 @@ The skill is designed to be readable by multiple coding agents:
 
 This project is based on a personal LLM-Wiki workflow and borrows ideas from:
 
-- The broader LLM Wiki pattern associated with compiling knowledge into persistent, interlinked wiki pages rather than relying only on flat retrieval.
+- Andrej Karpathy's LLM Wiki idea: compile useful knowledge into persistent, interlinked pages that an AI agent can keep improving over time.
 - Obsidian-style Markdown vaults and wikilinks: <https://obsidian.md>
-- Agent skill packaging with a `SKILL.md` entry point, plus portable project instructions through `AGENTS.md` and `CLAUDE.md`.
-- Recent LLM-Wiki research directions, including:
-  - [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](https://arxiv.org/abs/2605.25480)
-  - [WiCER: Wiki-memory Compile, Evaluate, Refine](https://arxiv.org/abs/2605.07068)
-  - [Memory as Metabolism: A Design for Companion Knowledge Systems](https://arxiv.org/abs/2604.12034)
+- Agent skill packaging with a `SKILL.md` entry point.
+- Portable agent instructions through `AGENTS.md` and `CLAUDE.md`, so the same workflow can be used by Codex, Claude Code, Reasonix, and similar coding agents.
 
 ## Status
 
