@@ -2,7 +2,7 @@
 
 This directory defines a portable skill for maintaining Ele's LLM-Wiki vault.
 
-Use this guide for Claude Code, Reasonix, Codex, or any agent that reads project-level instructions.
+Use this guide for Codex, Claude Code, or any agent that reads project-level instructions.
 
 ## Entry Points
 

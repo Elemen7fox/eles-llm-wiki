@@ -11,12 +11,11 @@ For detailed Chinese conventions, page patterns, note titles, audit patterns, an
 
 ## Agent Compatibility
 
-This folder is intentionally plain Markdown so Codex, Claude Code, Reasonix, and similar coding agents can use the same workflow.
+This folder is intentionally plain Markdown so Codex, Claude Code, and other coding agents can use the same workflow.
 
 - Codex: invoke `$eles-llm-wiki`; the skill body and references are the source of truth.
 - Claude Code: read `CLAUDE.md` or `AGENTS.md` in this skill folder, then follow `SKILL.md` and `references/llm-wiki-workflow.md`.
-- Reasonix: read `AGENTS.md`, then follow `SKILL.md` and the reference file as ordinary project instructions.
-- Other agents: load `SKILL.md` first; load the reference file only for non-trivial maintenance tasks.
+- Other compatible agents: read `AGENTS.md`, then follow `SKILL.md` and the reference file as ordinary project instructions.
 
 Do not rely on Codex-only tool names. Use equivalent local file search, file reading, file editing, shell, and validation capabilities provided by the active agent. Preserve the same safety rules: inspect first, avoid destructive edits, update backlinks and logs, and verify before claiming completion.
 

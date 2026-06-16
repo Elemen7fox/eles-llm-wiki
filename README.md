@@ -8,7 +8,7 @@ The skill is designed to be readable by multiple coding agents:
 
 - Codex: invoke `$eles-llm-wiki`.
 - Claude Code: read `CLAUDE.md` or `AGENTS.md`.
-- Reasonix and other agents: read `AGENTS.md`, then follow `SKILL.md`.
+- Other compatible agents: read `AGENTS.md`, then follow `SKILL.md`.
 
 ## What It Does
 
@@ -38,7 +38,7 @@ This project is based on a personal LLM-Wiki workflow and borrows ideas from:
 - Andrej Karpathy's LLM Wiki idea: compile useful knowledge into persistent, interlinked pages that an AI agent can keep improving over time.
 - Obsidian-style Markdown vaults and wikilinks: <https://obsidian.md>
 - Agent skill packaging with a `SKILL.md` entry point.
-- Portable agent instructions through `AGENTS.md` and `CLAUDE.md`, so the same workflow can be used by Codex, Claude Code, Reasonix, and similar coding agents.
+- Portable agent instructions through `AGENTS.md` and `CLAUDE.md`, so the same workflow can be used by Codex, Claude Code, and other compatible coding agents.
 
 ## Status
 
